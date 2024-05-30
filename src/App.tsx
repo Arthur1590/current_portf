@@ -6,8 +6,6 @@ import ScrollToTop from './utils/ScrollToTop/ScrollTop'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import PageTransition from './utils/FrameMotion/PageTransition'
-import { useReposStore } from './store/Store'
-import repoImages from './store/ReposImg'
 
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
@@ -17,7 +15,6 @@ const Contacts = lazy(() => import('./pages/Contacts'))
 
 function App() {
 	const location = useLocation()
-	const { repos } = useReposStore()
 
 	return (
 		<div className='App'>

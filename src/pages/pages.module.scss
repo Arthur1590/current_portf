@@ -13,7 +13,7 @@
   padding: 0 30px;
 }
 
-.error {
+.error, .repo__error {
   width: fit-content;
   font-size: clamp(1rem, 10vw, 4rem);
   font-weight: 700;

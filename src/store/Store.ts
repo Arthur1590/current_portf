@@ -11,6 +11,7 @@ interface Repo {
 	image?: string
 	created_at: string
 	language: string
+	Imgid: string
 }
 
 interface ReposState {

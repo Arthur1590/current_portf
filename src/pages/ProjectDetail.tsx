@@ -9,7 +9,9 @@ const ProjectDetail: FC = () => {
 	const { id } = useParams<{ id: string }>()
 	const { repos } = useReposStore()
 	const repo = repos.find(repo => repo.id === Number(id))
+
 	const imgId = repoImages[id]
+
 	if (!repo) {
 		return <div className={s.repo__error}>Repository not found</div>
 	}
@@ -25,7 +27,11 @@ const ProjectDetail: FC = () => {
 							</span>
 							<Link to='/projects'>Get Back</Link>
 						</p>
-						<img src={imgId} alt={repo.name} />
+						{imgId ? (
+							<img src={imgId} alt={repo.name} />
+						) : (
+							<p className={s.repo__error}>No image available</p>
+						)}
 						<article>
 							<p>
 								Was created: <span> {repo.created_at}</span>

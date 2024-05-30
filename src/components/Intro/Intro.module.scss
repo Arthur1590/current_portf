@@ -1,0 +1,123 @@
+.intro {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  & .container {
+    max-width: 1350px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & figure {
+    backdrop-filter: blur(2.5px) hue-rotate(145deg);
+    background: #fd853a13;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  & .intro__content {
+    backdrop-filter: blur(2.5px) hue-rotate(145deg);
+    background: #fd853a13;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.9rem;
+
+    h5 {
+      font-weight: 400;
+      color: #fff;
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+
+      span {
+        color: #fd853a;
+        font-family: "BebasNeue";
+        letter-spacing: 0.01rem;
+        font-size: clamp(1rem, 2vw, 1.9rem);
+      }
+    }
+
+    p {
+      font-weight: 400;
+      color: #fff;
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+    }
+
+    button {
+      color: #fd853a;
+      font-family: "Bebasneue";
+      font-size: clamp(1rem, 2vw, 1.8rem);
+      border: 1px solid #fd853a;
+      display: block;
+      padding: 1rem 1.2rem;
+      transition: 0.3s all ease-in-out;
+      &:hover {
+        background: #fd853a;
+        color: #f8eddf;
+      }
+    }
+  }
+
+  &__status {
+    border: 1px solid #333;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    backdrop-filter: blur(1rem);
+    background: #33333334;
+
+    &_box {
+      max-width: 15px;
+      width: 100%;
+      min-height: 15px;
+      background: #dadada;
+      animation: blink 1005ms infinite linear;
+    }
+
+    h5 {
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
+      font-weight: 400;
+      font-family: "BebasNeue";
+      color: #fd853a;
+
+      span {
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
+        color: #fd853a;
+        font-weight: 500;
+        font-family: "BebasNeue";
+      }
+    }
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

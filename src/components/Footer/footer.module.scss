@@ -1,0 +1,38 @@
+.footer {
+  width: fit-content;
+  min-height: 5rem;
+  background: #fd853a21;
+  backdrop-filter: blur(3.5px);
+  margin: 8rem auto 0;
+
+  border-top-left-radius: 1.4rem;
+  border-top-right-radius: 1.4rem;
+
+  display: flex;
+  align-self: flex-end;
+  box-shadow: 10px 75rem 100rem 70rem#fd853a7a;
+
+
+  & .wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      padding: 0 7rem;
+      font-weight: 600;
+      letter-spacing: 0.5rem;
+      color: #fff;
+      font-family: "BebasNeue";
+      font-size: clamp(1rem, 10vw, 10rem);
+    }
+
+    h5 {
+      font-weight: 400;
+      color: #fff;
+      font-size: clamp(1rem, 2.5vw, 1.9rem);
+      padding: 0 0 1rem 0;
+    }
+  }
+}

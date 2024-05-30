@@ -1,0 +1,19 @@
+// ? main title 
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../assets/fonts/BebasNeue/BebasNeue-Regular.ttf");
+  font-weight: 400;
+}
+// ?
+
+// * text
+$Outfit: ("Light", 300), ("Regular", 400), ("Medium", 500), ("SemiBold", 600), ("Bold", 700);
+
+@each $name, $weight in $Outfit {
+  @font-face {
+    font-family: "Outfit";
+    src: url("../assets/fonts/Outfit/Outfit-#{$name}.ttf");
+    font-weight: $weight;
+  }
+}
+// *

@@ -2,14 +2,14 @@ import { FC } from 'react'
 import s from './pages.module.scss'
 import { useParams } from 'react-router'
 import { useReposStore } from '../store/Store'
-import prj from '../components/ProjectCard/img/porfolio.jpg'
 import { Link } from 'react-router-dom'
+import repoImages from '../store/ReposImg'
 
 const ProjectDetail: FC = () => {
 	const { id } = useParams<{ id: string }>()
 	const { repos } = useReposStore()
 	const repo = repos.find(repo => repo.id === Number(id))
-
+	const imgId = repoImages[id]
 	if (!repo) {
 		return <div className={s.repo__error}>Repository not found</div>
 	}
@@ -25,11 +25,12 @@ const ProjectDetail: FC = () => {
 							</span>
 							<Link to='/projects'>Get Back</Link>
 						</p>
-						<img src={repo.image || prj} alt={repo.name} />
+						<img src={imgId} alt={repo.name} />
 						<article>
 							<p>
 								Was created: <span> {repo.created_at}</span>
 							</p>
+							<p>{repo.description}</p>
 							<p>
 								Language: <span> {repo.language || 'Undetected'}</span>
 							</p>

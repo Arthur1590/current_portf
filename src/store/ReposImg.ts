@@ -1,27 +1,23 @@
-import bank from '../components/ProjectCard/img/bank.jpg'
-import airpods from '../components/ProjectCard/img/airpods.jpg'
-import burningman from '../components/ProjectCard/img/burningman.jpg'
-import cosmetics from '../components/ProjectCard/img/cosmetics.jpg'
-import dudeshape from '../components/ProjectCard/img/dudeshape.jpg'
-import glasses from '../components/ProjectCard/img/glasses.jpg'
-import kinocinema from '../components/ProjectCard/img/kinocinema.jpg'
-import noke from '../components/ProjectCard/img/noke.jpg'
-import portfolio from '../components/ProjectCard/img/porfolio.jpg'
-import shopM from '../components/ProjectCard/img/shopM.jpg'
-import tourism from '../components/ProjectCard/img/tourism.jpg'
+import grayson from '../components/ProjectCard/img/grayson.png'
+import bank from '../components/ProjectCard/img/bank.png'
+import burger from '../components/ProjectCard/img/burger.png'
+import currentPortfolio from '../components/ProjectCard/img/currentPortfolio.png'
+import hubFinder from '../components/ProjectCard/img/hubFinder.png'
+import parallax from '../components/ProjectCard/img/parallax.png'
+import portfolioBeta from '../components/ProjectCard/img/portfolioBeta.png'
+import searchItems from '../components/ProjectCard/img/searchItems.png'
+import todolist from '../components/ProjectCard/img/todolist.png'
 
 const repoImages: { [key: number]: string } = {
-	733475646: bank,
-	745054036: airpods,
-	727831188: burningman,
-	728649921: cosmetics,
-	728714928: dudeshape,
-	748223178: glasses,
-	749691046: kinocinema,
-	743914722: noke,
-	742344823: portfolio,
-	726118928: shopM,
-	742058720: tourism,
+	808256180: grayson,
+	808255402: bank,
+	808221913: currentPortfolio,
+	808238112: hubFinder,
+	808251372: parallax,
+	808232894: portfolioBeta,
+	808245269: searchItems,
+	808248269: todolist,
+	808254065: burger,
 }
 
 export default repoImages

@@ -1,14 +1,16 @@
 import { FC } from 'react'
 import s from '../../pages/pages.module.scss'
-import prj from '../../components/ProjectCard/img/porfolio.jpg'
 import { Link } from 'react-router-dom'
+import prj from './img/currentPortfolio.png'
 
 interface Repo {
 	id: number
 	name: string
 	html_url: string
 	homepage: string
-	image: string
+	image?: string
+	created_at: string
+	description: string
 }
 
 interface CardProps {

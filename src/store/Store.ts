@@ -7,7 +7,8 @@ interface Repo {
 	name: string
 	html_url: string
 	homepage: string
-	image: string
+	description: string
+	image?: string
 	created_at: string
 	language: string
 }

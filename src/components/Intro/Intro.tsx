@@ -3,8 +3,10 @@ import s from './Intro.module.scss'
 import myPhoto from './img/MyPhoto.png'
 import { Link } from 'react-router-dom'
 import { RoutePaths } from '../../types/router'
+import { useTranslation } from 'react-i18next'
 
 const Intro: FC = () => {
+	const { t } = useTranslation()
 	return (
 		<>
 			<div className={s.intro}>
@@ -20,16 +22,20 @@ const Intro: FC = () => {
 					</figure>
 					<article className={s.intro__content}>
 						<h5>
-							Hi, I am a <span>web designer</span> and
-							<span> front-end developer</span>
+							{t('Hi, I am a')} <span>{t('web designer')}</span> {t('and')}
+							<span> {t('front-end developer')}</span>
 						</h5>
 						<p>
-							I craft responsive websites where technologies meet creativity
+							{t(
+								'I craft responsive websites where technologies meet creativity'
+							)}
 						</p>
 						<div className={s.intro__socials}>
 							<Link to={RoutePaths.CONTACTS}>
 								<button>
-									{'< '}Contact me{' />'}
+									{'< '}
+									{t('Contact me')}
+									{' />'}
 								</button>
 							</Link>
 						</div>

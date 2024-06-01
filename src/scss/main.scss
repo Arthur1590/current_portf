@@ -52,6 +52,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     background: #1f1d1d;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 * {
@@ -80,7 +81,8 @@ a {
 }
 
 button,
-input, textarea {
+input,
+textarea {
     border: none;
     background: none;
     outline: none;

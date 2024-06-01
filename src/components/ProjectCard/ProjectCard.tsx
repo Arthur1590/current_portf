@@ -2,6 +2,7 @@ import { FC } from 'react'
 import s from '../../pages/pages.module.scss'
 import { Link } from 'react-router-dom'
 import prj from './img/currentPortfolio.png'
+import { useTranslation } from 'react-i18next'
 
 interface Repo {
 	id: number
@@ -18,6 +19,8 @@ interface CardProps {
 }
 
 const RepoCard: FC<CardProps> = ({ card }) => {
+	const { t } = useTranslation()
+
 	return (
 		<>
 			<div className={s.projects__card}>
@@ -30,7 +33,7 @@ const RepoCard: FC<CardProps> = ({ card }) => {
 							rel='noopener noreferrer'
 							className={s.projects__card_link}
 						>
-							Learn More
+							{t('Learn More')}
 						</Link>
 						<a
 							href={card.homepage}
@@ -38,7 +41,7 @@ const RepoCard: FC<CardProps> = ({ card }) => {
 							rel='noopener noreferrer'
 							className={s.projects__card_link}
 						>
-							Live
+							{t('Live')}
 						</a>
 					</div>
 				</div>

@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 const Header: FC = () => {
 	const { t, i18n } = useTranslation()
 
-	const changeLanguage = (lng: string) => {
+	const changeLanguage = (lng: string): void => {
 		i18n.changeLanguage(lng)
 	}
 
@@ -28,17 +28,17 @@ const Header: FC = () => {
 							</li>
 							<li className={s.header__nav_item}>
 								<Link to={RoutePaths.ABOUT} className={s.header__nav_link}>
-									About
+									{t('About')}
 								</Link>
 							</li>
 							<li className={s.header__nav_item}>
 								<Link to={RoutePaths.PROJECTS} className={s.header__nav_link}>
-									Projects
+									{t('Projects')}
 								</Link>
 							</li>
 							<li className={s.header__nav_item}>
 								<Link to={RoutePaths.CONTACTS} className={s.header__nav_link}>
-									Contacts
+									{t('Contacts')}
 								</Link>
 							</li>
 						</ul>

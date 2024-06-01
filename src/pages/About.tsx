@@ -7,6 +7,7 @@ import telegram from '../assets/img/Platform=Telegram, Color=Original.svg'
 import instagram from '../assets/img/Platform=Instagram, Color=Original.svg'
 import { useSpring, animated } from '@react-spring/web'
 import { useInView } from 'react-intersection-observer'
+import { useTranslation } from 'react-i18next'
 
 const About: FC = () => {
 	const springs = useSpring({
@@ -28,7 +29,7 @@ const About: FC = () => {
 			}
 		},
 	})
-
+	const { t } = useTranslation()
 	return (
 		<>
 			<div className={s.aboutMe}>
@@ -62,19 +63,23 @@ const About: FC = () => {
 								}}
 							>
 								<h5>
-									Hello, my full name is <span>Fazilyanov Artur</span>
+									{t('Hello, my full name is')}
+									<span>{t('Fazilyanov Artur')}</span>
 								</h5>
 								<p>
-									I’m a self-taught front-end developer based in
-									<strong> Ferghana</strong>, <strong>Uzbekistan</strong>. I can
-									develop responsive websites from scratch and raise them into
-									modern user-friendly web experiences.
+									{t('I’m a self-taught front-end developer based in')}
+									<strong> {t('Ferghana')}</strong>,{' '}
+									<strong>{t('Uzbekistan')}</strong>.{' '}
+									{t(
+										'I can develop responsive websites from scratch and raise them into modern user-friendly web experiences'
+									)}
+									.
 								</p>
 								<p>
-									Transforming my creativity and knowledge into a websites has
-									been my passion for over a year. I have been helping various
-									clients to establish their presence online. I always strive to
-									learn about the newest technologies and frameworks.
+									{t(
+										'Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping variousclients to establish their presence online. I always strive tolearn about the newest technologies and frameworks'
+									)}
+									.
 								</p>
 								<div className={s.about__socials}>
 									<img src={github} alt='github' />

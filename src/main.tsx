@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import Loader from './utils/loader/Loader'
 import './scss/main.scss'
-import './i18n'
 import { HashRouter } from 'react-router-dom'
+import './i18n'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
-		<Suspense fallback={<Loader />}>
-			<HashRouter>
+		<HashRouter>
+			<Suspense fallback={<Loader />}>
 				<App />
-			</HashRouter>
-		</Suspense>
+			</Suspense>
+		</HashRouter>
 	</React.StrictMode>
 )

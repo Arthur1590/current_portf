@@ -102,9 +102,8 @@ const About: FC = () => {
 							<animated.div
 								ref={refGrid}
 								style={{
-									display: 'flex',
-									flexFlow: 'row wrap',
-									justifyContent: 'center',
+									display: 'grid',
+									gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
 									gap: '1rem',
 									...grid,
 								}}

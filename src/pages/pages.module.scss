@@ -13,7 +13,14 @@
   padding: 0 30px;
 }
 
-.error, .repo__error {
+.my__picture {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.error,
+.repo__error {
   width: fit-content;
   font-size: clamp(1rem, 10vw, 4rem);
   font-weight: 700;
@@ -45,14 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    & figure {
-      img {
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-      }
-    }
+    gap: 0.5rem;
 
     & div {
       & h5 {
@@ -151,7 +151,7 @@
 
   &__wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-auto-rows: auto;
     place-items: center;
     text-align: left;
@@ -159,11 +159,6 @@
   }
 
   &__card {
-    &_link {
-      perspective: 500;
-      transition: 0.2s all ease;
-    }
-
     &_el {
       border-radius: 20px;
       padding: 2rem;
@@ -259,16 +254,18 @@
 
         h5 {
           color: #fff;
+          font-size: clamp(1rem, 2.5vw, 2.5rem);
         }
 
         color: #fd853a;
-        font-family: "BebasNeue";
+        font-size: clamp(1rem, 2.5vw, 2.5rem);
       }
 
       a {
         padding: 0.5rem 1.2rem;
         outline: 1px solid #fd853a;
         font-weight: 400;
+        font-size: clamp(1rem, 2.5vw, 2.5rem);
       }
     }
 
@@ -287,15 +284,15 @@
 
         & span {
           color: #fd853a;
-          font-family: "BebasNeue";
           font-weight: 400;
-          font-size: clamp(1rem, 3rem, 2.5rem);
+          font-size: clamp(1rem, 2.5vw, 2.5rem);
         }
       }
 
       a {
         padding: 0.5rem 1.2rem;
         outline: 1px solid #fd853a;
+        font-size: clamp(1rem, 2.5vw, 2.5rem);
       }
     }
   }
@@ -354,6 +351,7 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+
       & input {
         padding: 0.5rem 1.5rem;
         color: #fff;

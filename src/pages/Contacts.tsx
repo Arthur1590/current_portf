@@ -9,8 +9,8 @@ const Contacts: FC = () => {
 	return (
 		<div className={s.contacts__holder}>
 			<div className={s.container}>
-				<div className={s.form__wrapper}>
-					<div className={s.input}>
+				<div id='contacts__wrapper' className={s.form__wrapper}>
+					<div id='contacts__inputs' className={s.input}>
 						<h1 className={s.section__title}>
 							Write me here <span>↓</span>
 						</h1>

@@ -10,7 +10,7 @@ const Intro: FC = () => {
 	return (
 		<>
 			<div className={s.intro}>
-				<div className={s.container}>
+				<div id='container__mq' className={s.container}>
 					<figure>
 						<img src={myPhoto} alt='developer picture' />
 						<article className={s.intro__status}>
@@ -20,6 +20,7 @@ const Intro: FC = () => {
 							<div className={s.intro__status_box}></div>
 						</article>
 					</figure>
+
 					<article className={s.intro__content}>
 						<h5>
 							{t('Hi, I am a')} <span>{t('web designer')}</span> {t('and')}

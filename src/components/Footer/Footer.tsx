@@ -1,10 +1,10 @@
-import React from 'react'
+import { FC } from 'react'
 import s from './footer.module.scss'
 
-const Footer = () => {
+const Footer: FC = () => {
 	return (
 		<>
-			<footer className={s.footer}>
+			<footer id='footer__mq' className={s.footer}>
 				<div className={s.wrapper}>
 					<h5>Designed and Coded by Artur</h5>
 					<h1>PORTFOLIO</h1>

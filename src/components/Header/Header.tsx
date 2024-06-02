@@ -1,25 +1,34 @@
 import { Link } from 'react-router-dom'
 import { RoutePaths } from '../../types/router'
 import s from './Header.module.scss'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import clsx from 'clsx'
 
 const Header: FC = () => {
 	const { t, i18n } = useTranslation()
+	const [view, setView] = useState(false)
+	const [isTrue, setTrue] = useState(true)
 
 	const changeLanguage = (lng: string): void => {
 		i18n.changeLanguage(lng)
+		setView(!view)
 	}
 
+	const classChangeMenu = clsx('menu', { active: !isTrue })
+	const classChangeList = clsx(`${s.header__nav_list}`, { active: !isTrue })
 	return (
 		<>
 			<header className='header'>
 				<div className={s.container}>
-					<nav className={s.header__nav}>
-						<ul className={s.header__nav_list}>
+					<nav id='nav__mq' className={s.header__nav}>
+						<ul className={classChangeList}>
 							<div className={s.lan__change}>
-								<button onClick={() => changeLanguage('en')}>En {'↓'}</button>
-								<button onClick={() => changeLanguage('ru')}>Ru {'↑'}</button>
+								{!view ? (
+									<button onClick={() => changeLanguage('ru')}>Ru {'↑'}</button>
+								) : (
+									<button onClick={() => changeLanguage('en')}>En {'↓'}</button>
+								)}
 							</div>
 							<li className={s.header__nav_item}>
 								<Link to={RoutePaths.HOME} className={s.header__nav_link}>
@@ -42,6 +51,10 @@ const Header: FC = () => {
 								</Link>
 							</li>
 						</ul>
+
+						<div className={classChangeMenu} onClick={() => setTrue(!isTrue)}>
+							<span></span>
+						</div>
 					</nav>
 				</div>
 			</header>

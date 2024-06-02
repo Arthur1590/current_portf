@@ -109,7 +109,6 @@
   min-height: 100vh;
 
   &__card {
-    max-width: 50rem;
     width: fit-content;
     padding: 2.5rem 3.5rem;
     border-radius: 40px;
@@ -144,22 +143,21 @@
 .projects {
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   margin-top: 10rem;
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-auto-rows: auto;
-    place-items: center;
-    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
     gap: 1rem;
   }
 
   &__card {
     &_el {
+      max-width: 25rem;
+      width: fit-content;
       border-radius: 20px;
       padding: 2rem;
       background: #fd853a21;
@@ -179,23 +177,25 @@
     div {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 1.5rem;
     }
 
     h3 {
       color: #fd853a;
       font-family: "BebasNeue";
-      font-size: clamp(1rem, 2.5vw, 1.5rem);
+      font-size: clamp(1rem, 2.5vw, 2.5rem);
       border: 0.9px solid #fd853a;
       padding: 0 0.5rem;
     }
 
     a {
+      display: block;
       width: fit-content;
       display: block;
+      font-size: clamp(1rem, 2.5vw, 1.9rem);
       outline: 1px solid #fd853a;
       font-weight: 400;
-      padding: 0.5rem 0.9rem;
+      padding: .3rem 1.2rem;
       cursor: pointer;
       transition: 0.3s all ease-in-out;
 
@@ -238,7 +238,7 @@
       object-position: center;
     }
 
-    & p {
+    & div {
       color: #fff;
       font-weight: 500;
       font-size: clamp(1rem, 2.5vw, 2.5rem);

@@ -33,7 +33,7 @@ const RepoCard: FC<CardProps> = ({ card }) => {
 							rel='noopener noreferrer'
 							className={s.projects__card_link}
 						>
-							{t('Learn More')}
+							{t('More')}
 						</Link>
 						<a
 							href={card.homepage}

@@ -24,11 +24,12 @@ const ProjectDetail: FC = () => {
 			<div className={s.projects__id}>
 				<div className={s.container}>
 					<div id='project__detail' className={s.projects__id_item}>
-						<p>
+						<div>
 							<span>
 								<h5>{t('Title')}:</h5> {repo.name}
 							</span>
-						</p>
+							<Link to='/projects'>{t('Back')}</Link>
+						</div>
 						{imgId ? (
 							<img src={imgId} alt={repo.name} />
 						) : (
@@ -42,9 +43,8 @@ const ProjectDetail: FC = () => {
 								{t('Language')}: <span> {repo.language || 'Undetected'}</span>
 							</p>
 							<a target='_blank' rel='noopener noreferrer' href={repo.html_url}>
-								Visit repository
+								{t('Visit repository')}
 							</a>
-							<Link to='/projects'>{t('Get Back')}</Link>
 						</article>
 					</div>
 				</div>

@@ -18,9 +18,11 @@ const About: FC = () => {
 		from: { x: -150, y: -150, opacity: 0, scale: 0 },
 		to: { x: 0, y: 0, opacity: 1, scale: 1 },
 	})
+
 	const [grid, apiGrid] = useSpring(() => ({
-		from: { x: -150, y: -150, opacity: 0, scale: 0 },
+		from: { x: -150, y: -1050, opacity: 0, scale: 0 },
 	}))
+
 	const { ref: refGrid, inView: inViewGrid } = useInView({
 		triggerOnce: true,
 		onChange: inView => {
@@ -29,6 +31,7 @@ const About: FC = () => {
 			}
 		},
 	})
+
 	const { t } = useTranslation()
 	return (
 		<>
@@ -103,17 +106,16 @@ const About: FC = () => {
 								ref={refGrid}
 								style={{
 									display: 'grid',
-									gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+									gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+									gridAutoRows: 'auto',
 									gap: '1rem',
+									placeItems: 'center',
 									...grid,
 								}}
 							>
 								<SkillsCard />
 							</animated.div>
 						</div>
-					</section>
-					<section className={s.container}>
-						<div className={s.soft__skills}></div>
 					</section>
 				</div>
 			</div>

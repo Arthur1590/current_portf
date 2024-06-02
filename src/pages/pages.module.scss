@@ -105,9 +105,6 @@
 }
 
 .skills {
-  width: 100%;
-  min-height: 100vh;
-
   &__card {
     width: fit-content;
     padding: 2.5rem 3.5rem;
@@ -195,7 +192,7 @@
       font-size: clamp(1rem, 2.5vw, 1.9rem);
       outline: 1px solid #fd853a;
       font-weight: 400;
-      padding: .3rem 1.2rem;
+      padding: 0.3rem 1.2rem;
       cursor: pointer;
       transition: 0.3s all ease-in-out;
 

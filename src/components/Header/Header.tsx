@@ -4,6 +4,7 @@ import s from './Header.module.scss'
 import { FC, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
+import Switcher from '../UI/Switcher'
 
 const Header: FC = () => {
 	const { t, i18n } = useTranslation()
@@ -50,6 +51,7 @@ const Header: FC = () => {
 									{t('Contacts')}
 								</Link>
 							</li>
+							<Switcher />
 						</ul>
 
 						<div className={classChangeMenu} onClick={() => setTrue(!isTrue)}>

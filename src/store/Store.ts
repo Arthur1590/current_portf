@@ -45,3 +45,30 @@ export const useReposStore = create<ReposState>(set => ({
 // ?
 
 // ? theme
+interface ThemeState {
+	theme: 'Light' | 'Dark'
+	toggleTheme: () => void
+	initTheme: () => void
+}
+
+export const useThemeStore = create<ThemeState>(set => ({
+	theme: 'Light',
+	toggleTheme: () =>
+		set(state => {
+			const newTheme = state.theme === 'Light' ? 'Dark' : 'Light'
+			document.body.classList.remove(state.theme)
+			document.body.classList.add(newTheme)
+			localStorage.setItem('theme', newTheme)
+			return { theme: newTheme }
+		}),
+	initTheme: () =>
+		set(state => {
+			const storedTheme = localStorage.getItem('theme') as
+				| 'Light'
+				| 'Dark'
+				| null
+			const theme = storedTheme || state.theme
+			document.body.classList.add(theme)
+			return { theme }
+		}),
+}))

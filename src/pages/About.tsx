@@ -1,13 +1,13 @@
+import { animated, useSpring } from '@react-spring/web'
 import { FC } from 'react'
-import s from './pages.module.scss'
+import { useTranslation } from 'react-i18next'
+import { useInView } from 'react-intersection-observer'
+import github from '../assets/img/Platform=Github, Color=Original.svg'
+import instagram from '../assets/img/Platform=Instagram, Color=Original.svg'
+import telegram from '../assets/img/Platform=Telegram, Color=Original.svg'
 import myPicture from '../components/Intro/img/MyPhoto.png'
 import SkillsCard from '../components/Skills/SkillsCard'
-import github from '../assets/img/Platform=Github, Color=Original.svg'
-import telegram from '../assets/img/Platform=Telegram, Color=Original.svg'
-import instagram from '../assets/img/Platform=Instagram, Color=Original.svg'
-import { useSpring, animated } from '@react-spring/web'
-import { useInView } from 'react-intersection-observer'
-import { useTranslation } from 'react-i18next'
+import s from './pages.module.scss'
 
 const About: FC = () => {
 	const springs = useSpring({
@@ -20,7 +20,7 @@ const About: FC = () => {
 	})
 
 	const [grid, apiGrid] = useSpring(() => ({
-		from: { x: -150, y: -1050, opacity: 0, scale: 0 },
+		from: { x: -150, y: -1000, opacity: 0, scale: 0 },
 	}))
 
 	const { ref: refGrid, inView: inViewGrid } = useInView({
@@ -67,7 +67,7 @@ const About: FC = () => {
 							>
 								<h5>
 									{t('Hello, my full name is')}
-									<span>{t('Fazilyanov Artur')}</span>
+									<span>{t(' Fazilyanov Artur')}</span>
 								</h5>
 								<p>
 									{t('I’m a self-taught front-end developer based in')}

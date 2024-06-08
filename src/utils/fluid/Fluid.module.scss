@@ -1,56 +1,56 @@
 .fluid_animation {
-  overflow: hidden;
-  position: relative;
-  min-height: 100vh;
+	overflow: hidden;
+	position: relative;
+	min-height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 
-  canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+	canvas {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 
-  & .container {
-    max-width: 1250px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 30px;
-  }
+	& .container {
+		max-width: 1250px;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 30px;
+	}
 
-  .fluid_intro {
-    max-width: fit-content;
-    z-index: 9;
-    pointer-events: none;
-    padding-bottom: 1rem;
+	.fluid_intro {
+		max-width: fit-content;
+		z-index: 9;
+		pointer-events: none;
+		padding-bottom: 1rem;
 
-    & article {
-      padding: 2rem 4.5rem;
+		& article {
+			padding: 2rem 4.5rem;
 
-      max-width: fit-content;
-      background: #00000023;
-      backdrop-filter: hue-rotate(180deg) blur(7.5px);
+			max-width: fit-content;
+			background: #00000023;
+			backdrop-filter: hue-rotate(180deg) blur(7.5px);
 
-      p {
-        color: #fff;
-        font-weight: 400;
-        font-size: clamp(1rem, 7vw, 7rem);
-      }
+			p {
+				color: #fff;
+				font-weight: 400;
+				font-size: clamp(1rem, 7vw, 7rem);
+			}
 
-      h1 {
-        font-weight: 600;
-        font-family: "BebasNeue";
-        font-size: clamp(1rem, 10vw, 15rem);
-        color: #fd853a;
-      }
+			h1 {
+				font-weight: 600;
+				font-family: 'BebasNeue';
+				font-size: clamp(1rem, 10vw, 15rem);
+				color: #fd853a;
+			}
 
-      h4 {
-        color: #fff;
-        font-weight: 400;
-        font-size: clamp(1rem, 2vw, 7.5rem);
-      }
-    }
-  }
+			h4 {
+				color: #fff;
+				font-weight: 400;
+				font-size: clamp(1rem, 2vw, 7.5rem);
+			}
+		}
+	}
 }

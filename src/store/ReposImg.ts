@@ -8,6 +8,7 @@ import portfolioBeta from "../components/ProjectCard/img/portfolioBeta.png";
 import searchItems from "../components/ProjectCard/img/searchItems.png";
 import todolist from "../components/ProjectCard/img/todolist.png";
 import weather from "../components/ProjectCard/img/weather.png";
+import diplome_2 from '../components/ProjectCard/img/diplome_2.jpg'
 
 const repoImages: { [key: number]: string } = {
   808256180: grayson,
@@ -20,6 +21,7 @@ const repoImages: { [key: number]: string } = {
   808248269: todolist,
   808254065: burger,
   808235340: weather,
+  815674325: diplome_2,
 };
 
 export default repoImages;

@@ -1,5 +1,6 @@
 @import './adaptive.scss';
-@import 'font.scss';
+// @import 'font.scss';
+@import 'fonts.scss';
 
 html {
 	scroll-behavior: smooth;
@@ -52,15 +53,14 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-family: 'FiraCode';
+	font-weight: 400;
 }
 
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: 'Outfit';
-	font-weight: 400;
 	color: #000000;
 }
 
@@ -92,18 +92,23 @@ input[type='text'] {
 }
 
 body.Light {
-	--bgWhiteMode: #fff9ec84;
-	--colorWhiteMode: #000;
-	--colorHeaderWhiteMode: #fd853a;
-	--colorFooterLightMode: #000;
-	--BorderDarkMode: 1px solid #fd853a;
-	--BgWhiteMode: none;
+	--bgDarkMode: #ffffff;
+	--colorFooterDarkMode: #fd853a;
+	--footerBorder: #000;
+	--colorDarkMode: #000000;
+	--BorderWhiteMode: 1px solid #000000;
+	--BorderNav: 1px solid #000000;
+	--colorHeaderWhiteDarkMode: #fff;
+	--colorNav: #fd853a;
 }
 
 body.Dark {
 	--bgDarkMode: #1f1d1d;
 	--colorFooterDarkMode: #fd853a;
+	--footerBorder: none;
 	--colorDarkMode: #ffffff;
-	--BorderDarkMode: 1px solid #fd853a;
+	--BorderWhiteMode: 1px solid #fd853a;
+	--BorderNav: none;
 	--colorHeaderWhiteDarkMode: #fff;
+	--colorNav: #fd853a;
 }

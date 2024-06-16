@@ -28,7 +28,7 @@ const ProjectDetail: FC = () => {
 							<span>
 								<h5>{t('Title')}:</h5> {repo.name}
 							</span>
-							<Link to='/projects'>{t('Back')}</Link>
+							<Link className={s.anc} to='/projects'>{t('Back')}</Link>
 						</div>
 						{imgId ? (
 							<img src={imgId} alt={repo.name} />

@@ -1,12 +1,14 @@
+@import '../../scss//main.scss';
+
 .footer {
 	width: fit-content;
 	min-height: 5rem;
 	background: #fd853a21;
+	border: 1px solid var(--footerBorder);
 	backdrop-filter: blur(3.5px);
 	margin: 8rem auto 0;
 	border-top-left-radius: 1.4rem;
 	border-top-right-radius: 1.4rem;
-	border: var(--BorderWhiteMode);
 	display: flex;
 	align-self: flex-end;
 	box-shadow: 10px 75rem 100rem 70rem#fd853a7a;

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import s from './Intro.module.scss'
-import myPhoto from './img/MyPhoto.png'
+import myPhoto from '../../assets/img/profiel.png'
 import { Link } from 'react-router-dom'
 import { RoutePaths } from '../../types/router'
 import { useTranslation } from 'react-i18next'

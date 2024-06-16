@@ -18,7 +18,7 @@
 		background: var(--bg);
 		border-radius: 5rem;
 		backdrop-filter: blur(10.5px) hue-rotate(90deg);
-		border: var(--BorderWhiteMode);
+		border: var(--BorderNav);
 
 		&_list {
 			z-index: 9999;
@@ -55,10 +55,10 @@
 				display: block;
 				padding: 1rem 0;
 				min-width: 124px;
-				font-size: clamp(1rem, 2.5vw, 1.5rem);
+				font-size: clamp(1rem, 2.5vw, 1.2rem);
 				font-weight: 400;
 				text-align: center;
-				color: var(--colorHeaderWhiteDarkMode);
+				color: var(--colorNav);
 				transition: 0.3s all ease-in-out;
 				border-radius: 5rem;
 				pointer-events: fill;

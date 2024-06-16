@@ -56,7 +56,11 @@
 
 		& div {
 			img {
+				max-width: 25rem;
+				width: 100%;
 				border: var(--BorderWhiteMode);
+				object-fit: cover;
+				border-radius: 1rem;
 			}
 
 			& h5 {
@@ -162,7 +166,7 @@
 			width: fit-content;
 			border-radius: 20px;
 			padding: 2rem;
-			border: var(--BorderDarkMode);
+			border: var(--BorderWhiteMode);
 			backdrop-filter: blur(2px);
 			display: flex;
 			flex-flow: column wrap;
@@ -230,8 +234,9 @@
 		max-width: 75rem;
 		width: 100%;
 		border-radius: 2.5rem;
+		border: var(--BorderWhiteMode);
 		padding: 2.5rem;
-		background: #fd853a21;
+		background: var(--bgDarkMode);
 		backdrop-filter: blur(2px);
 		margin-top: 10rem;
 
@@ -256,15 +261,15 @@
 				gap: 0.5rem;
 
 				h5 {
-					color: #fff;
+					color: var(--colorDarkMode);
 					font-size: clamp(1rem, 2.5vw, 2.5rem);
 				}
-
 				color: #fd853a;
 				font-size: clamp(1rem, 2.5vw, 2.5rem);
 			}
 
 			a {
+				color: var(--colorDarkMode);
 				padding: 0.5rem 1.2rem;
 				outline: 1px solid #fd853a;
 				font-weight: 400;
@@ -280,7 +285,7 @@
 			gap: 1.5rem;
 
 			p {
-				color: #fff;
+				color: var(--colorDarkMode);
 				padding: 2rem 0 0 0;
 				font-weight: 400;
 				font-size: clamp(1rem, 2.5vw, 1.5rem);
@@ -293,6 +298,7 @@
 			}
 
 			a {
+				color: var(--colorDarkMode);
 				padding: 0.5rem 1.2rem;
 				outline: 1px solid #fd853a;
 				font-size: clamp(1rem, 2.5vw, 2.5rem);
@@ -325,7 +331,8 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 1.5rem;
-		background: #3534343d;
+		background: #1f1d1dca;
+		border: var(--BorderWhiteMode);
 		border-radius: 50px;
 		backdrop-filter: blur(2px) invert(10%);
 		padding: 2.5rem;

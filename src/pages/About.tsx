@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer'
 import github from '../assets/img/Platform=Github, Color=Original.svg'
 import instagram from '../assets/img/Platform=Instagram, Color=Original.svg'
 import telegram from '../assets/img/Platform=Telegram, Color=Original.svg'
-import myPicture from '../components/Intro/img/MyPhoto.png'
+import myPicture from '../assets/img/profiel.png'
 import SkillsCard from '../components/Skills/SkillsCard'
 import s from './pages.module.scss'
 
@@ -62,6 +62,7 @@ const About: FC = () => {
 									background: '#fd853a13',
 									borderRadius: '20px',
 									padding: '2rem 2.5rem',
+									border: 'var(--BorderWhiteMode)',
 									...article,
 								}}
 							>

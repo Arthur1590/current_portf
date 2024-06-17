@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react'
+import { FC, useEffect, useState } from 'react'
 import { useReposStore } from '../store/Store'
 import ProjectCard from '../components/ProjectCard/ProjectCard'
 import s from './pages.module.scss'
@@ -7,7 +7,8 @@ import Loader from '../utils/loader/Loader'
 import Page404 from './Page404'
 
 const RepoList: FC = () => {
-	const { repos, status, fetchRepos } = useReposStore()
+	const { repos, status, fetchRepos, setCurrentRepo, currentRepo } =
+		useReposStore()
 
 	useEffect(() => {
 		fetchRepos()
@@ -25,13 +26,27 @@ const RepoList: FC = () => {
 		<div className={s.projects}>
 			<div className={s.container}>
 				<h1 className={s.section__title}>My small projects{'~~>'}</h1>
-				<div className={s.projects__wrapper}>
-					{repos.map(repo => (
-						<ProjectCard
-							key={repo.id}
-							card={{ ...repo, image: repoImages[repo.id] }}
-						/>
-					))}
+
+				<div className={s.tabs__content}>
+					<div className={s.tabs__content_tab}>
+						{repos.map(repo => (
+							<button
+								key={repo.id}
+								onClick={() => setCurrentRepo(repo)}
+								className={currentRepo?.id === repo.id ? `${s.active}` : ''}
+							>
+								{repo.name}
+							</button>
+						))}
+					</div>
+					{currentRepo && (
+						<div className={s.tabs__current}>
+							<ProjectCard
+								key={currentRepo.id}
+								card={{ ...currentRepo, image: repoImages[currentRepo.id] }}
+							/>
+						</div>
+					)}
 				</div>
 			</div>
 		</div>

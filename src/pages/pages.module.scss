@@ -149,7 +149,7 @@
 .projects {
 	width: 100%;
 	min-height: 100vh;
-	margin-top: 10rem;
+	margin-top: 5rem;
 
 	&__wrapper {
 		width: 100%;
@@ -161,44 +161,50 @@
 	}
 
 	&__card {
-		&_el {
-			max-width: 25rem;
+			padding: 1.2rem;
+			height: max-content;
 			width: fit-content;
 			border-radius: 20px;
-			padding: 2rem;
 			border: var(--BorderWhiteMode);
 			backdrop-filter: blur(2px);
 			display: flex;
-			flex-flow: column wrap;
-			align-items: flex-start;
+			align-items: center;
+			justify-content: center;
+			flex-flow: row wrap;
 			gap: 1.2rem;
-		}
+
+			height: 100%;
+			width: 100%;
+
+			&_holder {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				height: 100%;
+			}
 
 		img {
+			max-height: 48rem;
+			max-width: 48rem;
 			width: 100%;
 			object-fit: cover;
 			object-position: center;
-		}
-
-		div {
-			display: flex;
-			align-items: center;
-			gap: 1.5rem;
+			border-radius: 20px;
 		}
 
 		h3 {
 			color: #fd853a;
-			font-family: 'BebasNeue';
-			font-size: clamp(1rem, 2.5vw, 2.5rem);
+			font-size: clamp(1rem, 2.5vw, 1.1rem);
 			border: 0.9px solid #fd853a;
-			padding: 0 0.5rem;
+			padding: 0.6rem 1.2rem;
+
 		}
 
 		a {
 			display: block;
 			width: fit-content;
 			display: block;
-			font-size: clamp(1rem, 2.5vw, 1.9rem);
+			font-size: clamp(1rem, 2.5vw, 1.5rem);
 			outline: 1px solid #fd853a;
 			font-weight: 400;
 			padding: 0.3rem 1.2rem;
@@ -209,6 +215,35 @@
 			&:hover {
 				color: #fff;
 				background: #fd853a;
+			}
+		}
+	}
+
+	.tabs__content {
+		width: fit-content;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 1.5rem;
+
+		&_tab {
+			display: flex;
+			flex-flow: column wrap;
+			align-items: flex-start;
+			border: var(--BorderWhiteMode);
+
+			button {
+				color: var(--colorNav);
+				font-size: clamp(1rem, 1.5vw, 1.5rem);
+				padding: 0.4rem 1.2rem;
+				transition: 0.3s all ease-in-out;
+				width: 100%;
+				text-align: left;
+
+				&.active {
+					background: var(--colorNav);
+					color: var(--colorDarkMode);
+				}
 			}
 		}
 	}

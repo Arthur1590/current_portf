@@ -16,6 +16,8 @@ interface Repo {
 
 interface ReposState {
 	repos: Repo[]
+	currentRepo: Repo | null
+	setCurrentRepo: (repo: Repo) => void
 	status: 'idle' | 'loading' | 'succeeded' | 'failed'
 	error: string | null
 	fetchRepos: () => void
@@ -23,6 +25,7 @@ interface ReposState {
 
 export const useReposStore = create<ReposState>(set => ({
 	repos: [],
+	currentRepo: null,
 	status: 'idle',
 	error: null,
 	fetchRepos: async () => {
@@ -40,6 +43,7 @@ export const useReposStore = create<ReposState>(set => ({
 			set({ error: errorMessage, status: 'failed' })
 		}
 	},
+	setCurrentRepo: (repo: Repo) => set({ currentRepo: repo }),
 }))
 
 // ?

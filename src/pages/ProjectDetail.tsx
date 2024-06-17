@@ -7,7 +7,7 @@ import repoImages from '../store/ReposImg'
 import { useTranslation } from 'react-i18next'
 
 const ProjectDetail: FC = () => {
-	const { id } = useParams<{ id: string }>()
+	const { id } = useParams<{ id: any }>()
 	const { repos } = useReposStore()
 	const repo = repos.find(repo => repo.id === Number(id))
 
@@ -28,7 +28,9 @@ const ProjectDetail: FC = () => {
 							<span>
 								<h5>{t('Title')}:</h5> {repo.name}
 							</span>
-							<Link className={s.anc} to='/projects'>{t('Back')}</Link>
+							<Link className={s.anc} to='/projects'>
+								{t('Back')}
+							</Link>
 						</div>
 						{imgId ? (
 							<img src={imgId} alt={repo.name} />

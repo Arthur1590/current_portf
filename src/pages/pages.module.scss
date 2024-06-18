@@ -170,7 +170,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			flex-flow: row wrap;
+			flex-flow: column wrap;
 			gap: 1.2rem;
 
 			height: 100%;
@@ -222,13 +222,14 @@
 	.tabs__content {
 		width: fit-content;
 		display: flex;
-		align-items: flex-start;
+		align-items: center;
+		flex-direction: column;
 		justify-content: space-between;
 		gap: 1.5rem;
 
 		&_tab {
 			display: flex;
-			flex-flow: column wrap;
+			flex-flow: row wrap;
 			align-items: flex-start;
 			border: var(--BorderWhiteMode);
 
@@ -237,8 +238,13 @@
 				font-size: clamp(1rem, 1.5vw, 1.5rem);
 				padding: 0.4rem 1.2rem;
 				transition: 0.3s all ease-in-out;
-				width: 100%;
+				width: fit-content;
 				text-align: left;
+
+				&:hover {
+					background: var(--colorNav);
+					color: var(--colorDarkMode);
+				}
 
 				&.active {
 					background: var(--colorNav);

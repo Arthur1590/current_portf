@@ -50,7 +50,7 @@
 				}
 			}
 
-			& a,
+			& .header__nav_link,
 			button {
 				display: block;
 				padding: 1rem 0;
@@ -68,7 +68,8 @@
 				}
 
 				&:focus {
-					color: #fd853a;
+					background: #ffffff65;
+
 				}
 			}
 		}

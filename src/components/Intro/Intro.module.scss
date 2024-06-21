@@ -6,7 +6,7 @@
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
-
+	font-family: "FiraCode";
 	& .container {
 		max-width: 1350px;
 		width: 100%;
@@ -53,7 +53,6 @@
 
 			span {
 				color: #fd853a;
-				font-family: 'BebasNeue';
 				letter-spacing: 0.01rem;
 				font-size: clamp(1rem, 2vw, 1.9rem);
 			}
@@ -68,7 +67,6 @@
 
 		button {
 			color: #fd853a;
-			font-family: 'Bebasneue';
 			font-size: clamp(1rem, 2vw, 1.8rem);
 			border: 1px solid #fd853a;
 			display: block;
@@ -106,14 +104,12 @@
 		h5 {
 			font-size: clamp(1rem, 1.5vw, 1.5rem);
 			font-weight: 400;
-			font-family: 'BebasNeue';
 			color: #fd853a;
 
 			span {
 				font-size: clamp(1rem, 1.5vw, 1.5rem);
 				color: #fd853a;
 				font-weight: 500;
-				font-family: 'BebasNeue';
 			}
 		}
 	}

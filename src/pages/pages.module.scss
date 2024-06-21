@@ -1,5 +1,4 @@
 .section__title {
-	font-family: 'BebasNeue';
 	font-weight: 500;
 	font-size: clamp(1rem, 3.5vw, 5rem);
 	color: #fd853a;
@@ -24,7 +23,6 @@
 	width: fit-content;
 	font-size: clamp(1rem, 10vw, 4rem);
 	font-weight: 700;
-	font-family: 'BebasNeue';
 	color: #fd853a;
 	margin: 20rem auto 0;
 	display: flex;
@@ -64,7 +62,6 @@
 			}
 
 			& h5 {
-				font-family: 'Bebasneue';
 				font-weight: 500;
 				color: var(--colorDarkMode);
 				font-size: clamp(1rem, 2.5vw, 2.5rem);
@@ -72,7 +69,6 @@
 
 				& span {
 					color: #fd853a;
-					font-family: 'Bebasneue';
 					font-weight: 500;
 					font-size: clamp(1rem, 2.5vw, 2.5rem);
 				}
@@ -86,7 +82,6 @@
 
 				strong {
 					color: #fd853a;
-					font-family: 'Bebasneue';
 					font-size: clamp(1rem, 1.5vw, 1.5rem);
 					letter-spacing: 0.2rem;
 				}
@@ -114,9 +109,10 @@
 
 .skills {
 	&__card {
-		width: fit-content;
-		padding: 2.5rem 3.5rem;
+		height: 100%;
+		width: 100%;
 		border-radius: 40px;
+		padding: 1.5rem 0;
 		background: var(--bgWhiteMode);
 		box-shadow: 0 0 3px #fd853a;
 		backdrop-filter: blur(2px);
@@ -140,7 +136,6 @@
 		h5 {
 			color: var(--colorDarkMode);
 			font-weight: 400;
-			font-family: 'BebasNeue';
 			font-size: clamp(1rem, 3.5vw, 2.5rem);
 		}
 	}
@@ -161,35 +156,35 @@
 	}
 
 	&__card {
-			padding: 1.2rem;
-			height: max-content;
-			width: fit-content;
-			border-radius: 20px;
-			border: var(--BorderWhiteMode);
-			backdrop-filter: blur(2px);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-flow: column wrap;
-			gap: 1.2rem;
+		max-height: 25rem;
+		padding: 1.2rem;
+		height: max-content;
+		width: fit-content;
+		border-radius: 20px;
+		border: var(--BorderWhiteMode);
+		backdrop-filter: blur(2px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 0.5rem;
 
+		&_img {
+			padding: 1rem;
+			max-height: 20rem;
+			width: 100%;
 			height: 100%;
-			width: 100%;
-
-			&_holder {
-				display: flex;
-				align-items: center;
-				gap: 1rem;
-				height: 100%;
-			}
-
-		img {
-			max-height: 48rem;
-			max-width: 48rem;
-			width: 100%;
 			object-fit: cover;
 			object-position: center;
 			border-radius: 20px;
+		}
+
+		&_holder {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 1rem;
+			height: 100%;
 		}
 
 		h3 {
@@ -197,7 +192,7 @@
 			font-size: clamp(1rem, 2.5vw, 1.1rem);
 			border: 0.9px solid #fd853a;
 			padding: 0.6rem 1.2rem;
-
+			width: fit-content;
 		}
 
 		a {
@@ -222,14 +217,13 @@
 	.tabs__content {
 		width: fit-content;
 		display: flex;
-		align-items: center;
-		flex-direction: column;
-		justify-content: space-between;
+		align-items: flex-start;
 		gap: 1.5rem;
 
 		&_tab {
+			width: fit-content;
 			display: flex;
-			flex-flow: row wrap;
+			flex-flow: column wrap;
 			align-items: flex-start;
 			border: var(--BorderWhiteMode);
 
@@ -238,7 +232,7 @@
 				font-size: clamp(1rem, 1.5vw, 1.5rem);
 				padding: 0.4rem 1.2rem;
 				transition: 0.3s all ease-in-out;
-				width: fit-content;
+				width: 100%;
 				text-align: left;
 
 				&:hover {
@@ -279,7 +273,7 @@
 		padding: 2.5rem;
 		background: var(--bgDarkMode);
 		backdrop-filter: blur(2px);
-		margin-top: 10rem;
+		margin-top: 7rem;
 
 		& img {
 			width: 100%;

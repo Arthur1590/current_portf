@@ -1,116 +1,119 @@
 @media screen and (max-width: 768px) {
-  .App .header {
-    #nav__mq {
-      padding: 1rem 2rem;
-      display: flex;
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      background: none;
-      border-radius: none;
-      backdrop-filter: none;
+	.App .header {
+		#nav__mq {
+			padding: 1rem 2rem;
+			display: flex;
+			width: 100%;
+			display: flex;
+			justify-content: flex-end;
+			background: none;
+			border-radius: none;
+			backdrop-filter: none;
+      border: none;
 
-      ul {
-        border-radius: 0;
-        padding: 0;
-        transform: translateY(-150%);
-        flex-direction: column;
-        align-items: flex-end;
-        align-items: center;
-        transition: 0.3s all;
-        background: var(--bg);
-        border-radius: none;
-        backdrop-filter: blur(10.5px) hue-rotate(90deg);
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        &.active {
-          transform: translateY(0);
-        }
-      }
-    }
+			ul {
+				border-radius: 0;
+				padding: 1rem 0;
+				transform: translateY(-150%);
+				flex-direction: column;
+				align-items: flex-end;
+				align-items: center;
+				transition: 0.3s all;
+				background: var(--bg);
+				border-radius: none;
+				backdrop-filter: blur(10.5px) hue-rotate(90deg);
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				&.active {
+					transform: translateY(0);
+				}
+			}
+		}
 
-    .menu {
-      pointer-events: fill;
-      display: block;
-      position: relative;
-      cursor: pointer;
-      width: 30px;
-      height: 20px;
-      z-index: 9999;
-      & span {
-        position: absolute;
-        left: 0;
-        height: 2px;
-        width: 100%;
-        top: 50%;
-        transform: translateY(-50%) scale(1);
-        display: block;
-        background: #fff;
-        transition: 0.3s;
-      }
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background: #fff;
-        left: 0;
-        display: block;
-        transition: 0.3s;
-      }
-      &::after {
-        top: 0;
-      }
-      &::before {
-        bottom: 0;
-      }
-      &.active span {
-        scale: 0;
-        opacity: 0;
-      }
-      &.active::after {
-        transform: rotate(45deg);
-        top: 9px;
-      }
-      &.active::before {
-        transform: rotate(-45deg);
-        bottom: 9px;
-      }
-    }
-  }
+		.menu {
+			pointer-events: fill;
+			display: block;
+			position: relative;
+			cursor: pointer;
+			width: 30px;
+			height: 20px;
+			z-index: 9999;
 
-  #container__mq {
-    flex-direction: column;
-    gap: 0.7rem;
-  }
+			& span {
+				position: absolute;
+				left: 0;
+				height: 2px;
+				width: 100%;
+				top: 50%;
+				transform: translateY(-50%) scale(1);
+				display: block;
+				background: var(--colorDarkMode);
+				transition: 0.3s;
+			}
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				background: var(--colorDarkMode);
 
-  #footer__mq {
-    display: none;
-  }
+				left: 0;
+				display: block;
+				transition: 0.3s;
+			}
+			&::after {
+				top: 0;
+			}
+			&::before {
+				bottom: 0;
+			}
+			&.active span {
+				scale: 0;
+				opacity: 0;
+			}
+			&.active::after {
+				transform: rotate(45deg);
+				top: 9px;
+			}
+			&.active::before {
+				transform: rotate(-45deg);
+				bottom: 9px;
+			}
+		}
+	}
 
-  #project__detail {
-    padding: 2rem 1rem;
-  }
+	#container__mq {
+		flex-direction: column;
+		gap: 0.7rem;
+	}
 
-  #contacts__inputs {
-    flex-direction: column;
-  }
-  #contacts__wrapper {
-    margin-top: -5rem;
-    border-radius: 0;
-    padding: 1.5rem 1rem;
-    textarea {
-      max-width: 15rem;
-    }
-  }
+	#footer__mq {
+		display: none;
+	}
+
+	#project__detail {
+		padding: 2rem 1rem;
+	}
+
+	#contacts__inputs {
+		flex-direction: column;
+	}
+	#contacts__wrapper {
+		margin-top: -5rem;
+		border-radius: 0;
+		padding: 1.5rem 1rem;
+		textarea {
+			max-width: 15rem;
+		}
+	}
 }
 @media screen and (max-width: 1000px) {
-  #about__mq {
-    flex-direction: column;
-    margin: 1.5rem 0;
-    text-align: center;
-  }
+	#about__mq {
+		flex-direction: column;
+		margin: 1.5rem 0;
+		text-align: center;
+	}
 }

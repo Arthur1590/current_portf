@@ -49,7 +49,7 @@ export const data = [
 		img: win11,
 	},
 	{
-		title: 'Coming soon..',
+		title: 'Soon...',
 		img: unkw,
 	},
 ]

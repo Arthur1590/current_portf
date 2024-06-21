@@ -29,15 +29,16 @@ const RepoList: FC = () => {
 
 				<div className={s.tabs__content}>
 					<div className={s.tabs__content_tab}>
-						{repos.map(repo => (
-							<button
-								key={repo.id}
-								onClick={() => setCurrentRepo(repo)}
-								className={currentRepo?.id === repo.id ? `${s.active}` : ''}
-							>
-								{repo.name}
-							</button>
-						))}
+						{repos &&
+							repos.map(repo => (
+								<button
+									key={repo.id}
+									onClick={() => setCurrentRepo(repo)}
+									className={currentRepo?.id === repo.id ? `${s.active}` : ''}
+								>
+									{repo.name}
+								</button>
+							))}
 					</div>
 					{currentRepo && (
 						<div className={s.tabs__current}>

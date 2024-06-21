@@ -24,17 +24,16 @@ const RepoCard: FC<CardProps> = ({ card }) => {
 	return (
 		<>
 			<div className={s.projects__card}>
-			<h3>{card.name}</h3>
-				<img src={card.image || prj} alt={`${card.name} Repo Image`} />
 				<div className={s.projects__card_holder}>
 					<Link
 						to={`/projects/${card.id}`}
 						rel='noopener noreferrer'
 						className={s.projects__card_link}
-						>
+					>
 						{t('More')}
 					</Link>
-						
+					<h3>{card.name}</h3>
+
 					<a
 						href={card.homepage}
 						target='_blank'
@@ -44,6 +43,7 @@ const RepoCard: FC<CardProps> = ({ card }) => {
 						{t('Live')}
 					</a>
 				</div>
+				<img className={s.projects__card_img} src={card.image || prj} alt={`${card.name} Repo Image`} />
 			</div>
 		</>
 	)

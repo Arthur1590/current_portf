@@ -10,8 +10,10 @@ import todolist from "../components/ProjectCard/img/todolist.png";
 import weather from "../components/ProjectCard/img/weather.png";
 import diplome_2 from '../components/ProjectCard/img/diplome_2.jpg'
 import todo_tsx from '../components/ProjectCard/img/todo_tsx.jpg'
+import summerShop from '../components/ProjectCard/img/summerShop.png'
 
 const repoImages: { [key: number]: string } = {
+  820603888: summerShop,
   808256180: grayson,
   808255402: bank,
   808221913: currentPortfolio,

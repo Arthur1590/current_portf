@@ -6,5 +6,7 @@
 4) axios 
 5) gh-pages
 6) i18n-next
-7) redux-toolkit
+7) zustand
+8) framer-motion
+9) clsx
 

@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react'
+import { FC, useEffect } from 'react'
 import { useReposStore } from '../store/Store'
 import ProjectCard from '../components/ProjectCard/ProjectCard'
 import s from './pages.module.scss'

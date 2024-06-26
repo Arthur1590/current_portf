@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import s from './pages.module.scss'
-import FluidEnhanced from '../utils/fluid/FluidEnhanced'
 
 const Contacts: FC = () => {
 	const reloaderhandler = () => {

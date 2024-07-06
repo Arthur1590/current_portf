@@ -1,10 +1,10 @@
 import { FC, useEffect } from 'react'
 import { useReposStore } from '../store/Store'
 import ProjectCard from '../components/ProjectCard/ProjectCard'
-import s from './pages.module.scss'
 import repoImages from '../store/ReposImg'
 import Loader from '../utils/loader/Loader'
 import Page404 from './Page404'
+import s from './pages.module.scss'
 
 const RepoList: FC = () => {
 	const { repos, status, fetchRepos, setCurrentRepo, currentRepo } =
@@ -13,6 +13,12 @@ const RepoList: FC = () => {
 	useEffect(() => {
 		fetchRepos()
 	}, [fetchRepos])
+
+	useEffect(() => {
+		if (!currentRepo && repos.length > 0) {
+			setCurrentRepo(repos[0])
+		}
+	}, [repos, currentRepo, setCurrentRepo])
 
 	if (status === 'loading') {
 		return <Loader />

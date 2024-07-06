@@ -9,6 +9,7 @@ const FollowPointer = () => {
 		<motion.div
 			ref={ref}
 			className='box'
+			id='box1'
 			style={{
 				x,
 				y,

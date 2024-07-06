@@ -17,9 +17,9 @@ interface Repo {
 interface ReposState {
 	repos: Repo[]
 	currentRepo: Repo | null
-	setCurrentRepo: (repo: Repo) => void
 	status: 'idle' | 'loading' | 'succeeded' | 'failed'
 	error: string | null
+	setCurrentRepo: (repo: Repo) => void
 	fetchRepos: () => void
 }
 

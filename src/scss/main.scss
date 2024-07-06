@@ -7,11 +7,11 @@ html {
 	overflow-y: scroll;
 }
 .box {
-	width: 80px;
-	height: 80px;
+	width: 60px;
+	height: 60px;
 	border-radius: 50%;
 	background: #0f214168;
-	backdrop-filter: blur(2.5px) hue-rotate(90deg);
+	backdrop-filter: blur(1px) hue-rotate(180deg);
 	z-index: 999999;
 	position: fixed;
 	pointer-events: none;

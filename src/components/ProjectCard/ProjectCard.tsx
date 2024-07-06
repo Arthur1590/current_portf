@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import s from '../../pages/pages.module.scss'
-import { Link } from 'react-router-dom'
 import prj from './img/currentPortfolio.png'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import s from '../../pages/pages.module.scss'
 
 interface Repo {
 	id: number

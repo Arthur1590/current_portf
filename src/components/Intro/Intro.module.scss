@@ -1,12 +1,13 @@
 @import '../../scss/main.scss';
 
 .intro {
-	margin-top: 2.5rem;
+	padding-top: 180px;
 	width: 100%;
-	min-height: 100vh;
+	height: 100vh;
 	display: flex;
 	align-items: center;
 	font-family: "FiraCode";
+
 	& .container {
 		max-width: 1350px;
 		width: 100%;

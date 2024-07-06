@@ -1,5 +1,11 @@
 // components/PageTransition.tsx
-import { motion, AnimatePresence, AnimationProps } from 'framer-motion'
+import {
+	motion,
+	AnimatePresence,
+	AnimationProps,
+	useViewportScroll,
+	useTransform,
+} from 'framer-motion'
 import { FC, ReactNode } from 'react'
 
 interface PageTransitionProps {
@@ -12,10 +18,10 @@ const PageTransition: FC<PageTransitionProps & AnimationProps> = ({
 	return (
 		<AnimatePresence mode='wait'>
 			<motion.div
-				initial={{ opacity: 0, translateX: 50 }}
-				animate={{ opacity: 1,  translateX: 0}}
+				initial={{ opacity: 0, translateY: -50 }}
+				animate={{ opacity: 1, translateY: 0 }}
 				exit={{ opacity: 0, translateX: 100 }}
-				transition={{ duration: 0.5 }}
+				transition={{ duration: .5 }}
 			>
 				{children}
 			</motion.div>

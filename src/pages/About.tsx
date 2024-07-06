@@ -1,55 +1,21 @@
-import { animated, useSpring } from '@react-spring/web'
-import { FC } from 'react'
+import { FC, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useInView } from 'react-intersection-observer'
 import github from '../assets/img/Platform=Github, Color=Original.svg'
 import instagram from '../assets/img/Platform=Instagram, Color=Original.svg'
 import telegram from '../assets/img/Platform=Telegram, Color=Original.svg'
 import myPicture from '../assets/img/profiel.png'
-import SkillsCard from '../components/Skills/SkillsCard'
 import s from './pages.module.scss'
 
 const About: FC = () => {
-	const springs = useSpring({
-		from: { x: -150, y: -150, opacity: 0, scale: 0 },
-		to: { x: 0, y: 0, opacity: 1, scale: 1 },
-	})
-	const article = useSpring({
-		from: { x: -150, y: -150, opacity: 0, scale: 0 },
-		to: { x: 0, y: 0, opacity: 1, scale: 1 },
-	})
-
-	const [grid, apiGrid] = useSpring(() => ({
-		from: { x: -150, y: -1000, opacity: 0, scale: 0 },
-	}))
-
-	const { ref: refGrid, inView: inViewGrid } = useInView({
-		triggerOnce: true,
-		onChange: inView => {
-			if (inView) {
-				apiGrid.start({ x: 0, y: 0, opacity: 1, scale: 1 })
-			}
-		},
-	})
-
 	const { t } = useTranslation()
+
 	return (
 		<>
 			<div className={s.aboutMe}>
 				<div className={s.about}>
 					<section className={s.container}>
 						<div id='about__mq' className={s.about__wrapper}>
-							<animated.div
-								style={{
-									backdropFilter: 'blur(2.5px) hue-rotate(145deg)',
-									background: '#fd853a13',
-									display: 'flex',
-									alignItems: 'flex-end',
-									borderRadius: '20px',
-									position: 'relative',
-									...springs,
-								}}
-							>
+							<div className={s.about__wrapper_holder}>
 								<img className={s.my__picture} src={myPicture} alt='#' />
 								<div className={s.about__socials}>
 									<a href='https://github.com/Arthur1590' target='_blank'>
@@ -60,30 +26,17 @@ const About: FC = () => {
 									</a>
 									<img src={instagram} alt='instagram' />
 								</div>
-							</animated.div>
+							</div>
 
-							<animated.div
-								style={{
-									maxWidth: '35rem',
-									width: '100%',
-									display: 'flex',
-									flexFlow: 'wrap column',
-									backdropFilter: 'blur(2.5px) hue-rotate(145deg)',
-									background: '#fd853a13',
-									borderRadius: '20px',
-									padding: '1rem 1.5rem',
-									border: 'var(--BorderWhiteMode)',
-									...article,
-								}}
-							>
+							<div className={s.about__wrapper_content}>
 								<h5>
 									{t('Hello, my full name is')}
 									<span> {t('Fazilyanov Artur')}</span>
 								</h5>
 								<p>
 									{t('I’m a self-taught front-end developer based in')}
-									<strong> {t('Ferghana')}</strong>,{' '}
-									<strong>{t('Uzbekistan')}</strong>.{' '}
+									<strong> {t('Ferghana')}</strong>,
+									<strong>{t('Uzbekistan')}</strong>.
 									{t(
 										'I can develop responsive websites from scratch and raise them into modern user-friendly web experiences'
 									)}
@@ -95,29 +48,15 @@ const About: FC = () => {
 									)}
 									.
 								</p>
-							</animated.div>
+							</div>
 						</div>
 					</section>
 				</div>
 				<div className={s.skills}>
 					<section className={s.container}>
-						<h5 className={s.section__title}>{t('About my skillset')} {'/>'}</h5>
-
-						<div className={s.skills__wrapper}>
-							<animated.div
-								ref={refGrid}
-								style={{
-									display: 'grid',
-									gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-									gridAutoRows: 'auto',
-									gap: '1rem',
-									placeItems: 'center',
-									...grid,
-								}}
-							>
-								<SkillsCard />
-							</animated.div>
-						</div>
+						<h5 className={s.section__title}>
+							{t('About my skillset')} {'/>'}
+						</h5>
 					</section>
 				</div>
 			</div>

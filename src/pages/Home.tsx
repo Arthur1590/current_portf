@@ -1,16 +1,14 @@
+import { FC } from 'react'
 import Intro from '../components/Intro/Intro'
 import FluidEnhanced from '../utils/fluid/FluidEnhanced'
-import s from './pages.module.scss'
 
-const Home = () => {
+const Home: FC = () => {
 	return (
-		<>
-			<div className={s.home__wrapper}>
-				<FluidEnhanced />
+		<div>
+			<FluidEnhanced />
 
-				<Intro />
-			</div>
-		</>
+			<Intro />
+		</div>
 	)
 }
 

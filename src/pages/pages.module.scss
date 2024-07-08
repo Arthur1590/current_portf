@@ -1,3 +1,5 @@
+@import '../scss/main.scss';
+
 .section__title {
 	font-weight: 500;
 	font-size: clamp(1rem, 3.5vw, 5rem);
@@ -39,9 +41,9 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	.about {
-		flex-grow: 1;
+	position: relative;
 
+	.about {
 		& .container {
 			display: flex;
 			flex-direction: column;
@@ -112,26 +114,25 @@
 				& h5 {
 					font-weight: 500;
 					color: var(--colorDarkMode);
-					font-size: clamp(1rem, 2.5vw, 2rem);
+					font-size: clamp(0.9rem, 2.5vw, 2rem);
 					padding: 0.5rem 0;
 
 					& span {
 						color: #fd853a;
 						font-weight: 500;
-						font-size: clamp(1rem, 2.5vw, 2rem);
+						font-size: clamp(0.8rem, 2.5vw, 2rem);
 					}
 				}
 
 				p {
 					color: var(--colorDarkMode);
 					font-weight: 400;
-					font-size: clamp(1rem, 1.5vw, 1.2rem);
+					font-size: clamp(0.9rem, 1.5vw, 1.2rem);
 					padding: 0.5rem 0;
 
 					strong {
 						color: #fd853a;
 						font-size: clamp(1rem, 1.5vw, 1.5rem);
-						letter-spacing: 0.2rem;
 					}
 				}
 			}
@@ -140,6 +141,15 @@
 }
 
 .skills {
+	margin-top: 4.5rem;
+	position: relative;
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		align-items: center;
+		gap: 1rem;
+	}
 	&__card {
 		height: 100%;
 		width: 100%;
@@ -169,6 +179,7 @@
 			color: var(--colorDarkMode);
 			font-weight: 400;
 			font-size: clamp(1rem, 3.5vw, 2.5rem);
+			flex-grow: 1;
 		}
 	}
 }
@@ -177,20 +188,13 @@
 	width: 100%;
 	min-height: 100vh;
 	margin-top: 5rem;
-
-	&__wrapper {
-		width: 100%;
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: flex-start;
-		align-items: center;
-		gap: 1rem;
-	}
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	&__card {
-		max-height: 25rem;
 		padding: 1.2rem;
-		height: max-content;
+		min-height: 551px;
 		width: fit-content;
 		border-radius: 20px;
 		border: var(--BorderWhiteMode);
@@ -228,7 +232,6 @@
 		}
 
 		a {
-			display: block;
 			width: fit-content;
 			display: block;
 			font-size: clamp(1rem, 2.5vw, 1.5rem);
@@ -251,6 +254,7 @@
 		display: flex;
 		align-items: flex-start;
 		gap: 1.5rem;
+		height: 100vh;
 
 		&_tab {
 			width: fit-content;
@@ -260,7 +264,7 @@
 			border: var(--BorderWhiteMode);
 
 			button {
-				color: var(--colorNav);
+				color: var(--colorProjects);
 				font-size: clamp(1rem, 1.5vw, 1.5rem);
 				padding: 0.4rem 1.2rem;
 				transition: 0.3s all ease-in-out;
@@ -269,21 +273,19 @@
 
 				&:hover {
 					background: var(--colorNav);
-					color: var(--colorDarkMode);
+					color: var(--colorProjects);
 				}
 
 				&.active {
 					background: var(--colorNav);
-					color: var(--colorDarkMode);
+					color: var(--colorProjectsActive);
 				}
 			}
 		}
 
 		.tabs__current {
 			position: sticky;
-			top: 4.5rem;
-			left: 0;
-			right: 0;
+			top: 11.5rem;
 		}
 	}
 }
@@ -326,8 +328,9 @@
 			font-weight: 500;
 			font-size: clamp(1rem, 2.5vw, 2.5rem);
 			display: flex;
+			flex-direction: column;
 			align-items: center;
-			justify-content: space-between;
+			gap: 0.5rem;
 			padding: 1rem 0;
 
 			span {

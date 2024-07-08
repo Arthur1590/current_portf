@@ -9,7 +9,7 @@
 			background: none;
 			border-radius: none;
 			backdrop-filter: none;
-      border: none;
+			border: none;
 
 			ul {
 				border-radius: 0;
@@ -18,16 +18,20 @@
 				flex-direction: column;
 				align-items: flex-end;
 				align-items: center;
-				transition: 0.3s all;
+				transition: 0.3s all ease-in-out;
 				background: var(--bg);
 				border-radius: none;
-				backdrop-filter: blur(10.5px) hue-rotate(90deg);
+				backdrop-filter: blur(10.5px) hue-rotate(190deg);
 				position: fixed;
 				top: 0;
 				left: 0;
 				right: 0;
+				bottom: 0;
+				opacity: 0;
+
 				&.active {
 					transform: translateY(0);
+					opacity: 1;
 				}
 			}
 		}
@@ -40,6 +44,7 @@
 			width: 30px;
 			height: 20px;
 			z-index: 9999;
+			backdrop-filter: blur(5px);
 
 			& span {
 				position: absolute;
@@ -108,6 +113,27 @@
 		textarea {
 			max-width: 15rem;
 		}
+	}
+}
+@media screen and (max-width: 450px) {
+	.projects .projects__card_holder h3 {
+		display: none;
+	}
+}
+@media screen and (max-width: 578px) {
+	.projects .container .tabs__content {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	.projects .tabs__content .tabs__content_tab {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+	.projects .tabs__content .tabs__content_tab button {
+		width: fit-content;
+		padding: 1rem 0.5rem;
 	}
 }
 @media screen and (max-width: 1000px) {

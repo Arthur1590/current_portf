@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import s from '../../pages/pages.module.scss'
 import { data } from './skillsData'
+import s from '../../pages/pages.module.scss'
 
 const SkillsCard: FC = () => {
 	return (

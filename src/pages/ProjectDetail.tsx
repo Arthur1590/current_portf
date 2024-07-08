@@ -24,7 +24,7 @@ const ProjectDetail: FC = () => {
 			<div className={s.projects__id}>
 				<div className={s.container}>
 					<div id='project__detail' className={s.projects__id_item}>
-						<div>
+						<div className={s.projects__id_item_backLink}>
 							<span>
 								<h5>{t('Title')}:</h5> {repo.name}
 							</span>

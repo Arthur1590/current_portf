@@ -17,7 +17,7 @@
 		pointer-events: none;
 		background: var(--bg);
 		border-radius: 5rem;
-		backdrop-filter: blur(10.5px) hue-rotate(90deg);
+		backdrop-filter: blur(10.5px) hue-rotate(190deg);
 		border: var(--BorderNav);
 
 		&_list {
@@ -69,7 +69,6 @@
 
 				&:focus {
 					background: #ffffff65;
-
 				}
 			}
 		}

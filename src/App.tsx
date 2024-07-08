@@ -1,4 +1,4 @@
-import { lazy } from 'react'
+import { lazy, useEffect, useState } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { RoutePaths } from './types/router'
@@ -6,7 +6,7 @@ import ScrollToTop from './utils/ScrollToTop/ScrollTop'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import PageTransition from './utils/FrameMotion/PageTransition'
-import FollowPointer from './utils/FollowMotion/FollowPointer'
+import clsx from 'clsx'
 // * lazy
 const Home = lazy(() => import('./pages/Home'))
 const About = lazy(() => import('./pages/About'))
@@ -16,11 +16,25 @@ const Contacts = lazy(() => import('./pages/Contacts'))
 
 function App() {
 	const location = useLocation()
+	const [isTrue, setTrue] = useState(true)
+	const classChangeMenu = clsx('menu', { active: !isTrue })
+
+	const menuCloser = () => {
+		setTrue(true)
+	}
+
+	useEffect(() => {
+		menuCloser()
+	}, [location])
+
 	return (
-		<div className='App'>
+		<div className='App' onClick={menuCloser}>
 			<ScrollToTop />
-			<Header />
-			<FollowPointer />
+			<Header
+				classChangeMenu={classChangeMenu}
+				isTrue={isTrue}
+				setTrue={setTrue}
+			/>
 			<main className='main'>
 				<AnimatePresence mode='wait'>
 					<Routes location={location} key={location.pathname}>
@@ -28,7 +42,7 @@ function App() {
 							path={RoutePaths.HOME}
 							element={
 								<PageTransition>
-									<Home />
+									<Home setTrue={setTrue} />
 								</PageTransition>
 							}
 						/>

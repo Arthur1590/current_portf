@@ -1,9 +1,10 @@
-import { FC, useRef } from 'react'
+import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import github from '../assets/img/Platform=Github, Color=Original.svg'
 import instagram from '../assets/img/Platform=Instagram, Color=Original.svg'
 import telegram from '../assets/img/Platform=Telegram, Color=Original.svg'
 import myPicture from '../assets/img/profiel.png'
+import SkillsCard from '../components/Skills/SkillsCard'
 import s from './pages.module.scss'
 
 const About: FC = () => {
@@ -57,6 +58,9 @@ const About: FC = () => {
 						<h5 className={s.section__title}>
 							{t('About my skillset')} {'/>'}
 						</h5>
+						<div className={s.skills__wrapper}>
+							<SkillsCard />
+						</div>
 					</section>
 				</div>
 			</div>

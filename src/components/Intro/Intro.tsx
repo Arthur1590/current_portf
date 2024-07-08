@@ -11,16 +11,6 @@ const Intro: FC = () => {
 		<>
 			<div className={s.intro}>
 				<div id='container__mq' className={s.container}>
-					<figure>
-						<img src={myPhoto} alt='developer picture' />
-						<article className={s.intro__status}>
-							<h5>
-								Currently working on <span>Portfolio</span>
-							</h5>
-							<div className={s.intro__status_box}></div>
-						</article>
-					</figure>
-
 					<article className={s.intro__content}>
 						<h5>
 							{t('Hi, I am a')} <span>{t('web designer')}</span> {t('and')}

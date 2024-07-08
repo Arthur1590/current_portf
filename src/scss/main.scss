@@ -26,11 +26,7 @@ html {
 	margin: 0;
 }
 
-#root,
-body,
-html {
-	height: 100%;
-}
+
 
 .main {
 	flex-grow: 1;
@@ -105,20 +101,24 @@ body.Light {
 	--bgDarkMode: #ffffff;
 	--colorFooterDarkMode: #fd853a;
 	--footerBorder: #000;
-	--colorDarkMode: #000000;
+	--colorDarkMode: #fd853a;
 	--BorderWhiteMode: 1px solid #000000;
 	--BorderNav: 1px solid #000000;
-	--colorHeaderWhiteDarkMode: #fff;
+	--colorHeaderWhiteDarkMode: #000;
 	--colorNav: #fd853a;
+	--colorProjects: #2b2b2b;
+	--colorProjectsActive: #2b2b2b;
 }
 
 body.Dark {
 	--bgDarkMode: #1f1d1d;
 	--colorFooterDarkMode: #fd853a;
 	--footerBorder: none;
-	--colorDarkMode: #ffffff;
+	--colorDarkMode: #fd853a;
 	--BorderWhiteMode: 1px solid #fd853a;
 	--BorderNav: none;
 	--colorHeaderWhiteDarkMode: #fff;
 	--colorNav: #fd853a;
+	--colorProjects: #fd853a;
+	--colorProjectsActive: #fff;
 }

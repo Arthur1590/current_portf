@@ -2,9 +2,16 @@ import { FC } from 'react'
 import Intro from '../components/Intro/Intro'
 import FluidEnhanced from '../utils/fluid/FluidEnhanced'
 
-const Home: FC = () => {
+interface IHome {
+	setTrue: (state: boolean) => void
+}
+const Home: FC<IHome> = ({ setTrue }) => {
+	const menuCloser = () => {
+		setTrue(true)
+	}
+
 	return (
-		<div>
+		<div onClick={menuCloser}>
 			<FluidEnhanced />
 
 			<Intro />

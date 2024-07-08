@@ -1,26 +1,31 @@
 import { Link } from 'react-router-dom'
 import { RoutePaths } from '../../types/router'
-import s from './Header.module.scss'
 import { FC, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import clsx from 'clsx'
 import Switcher from '../UI/Switcher'
+import s from './Header.module.scss'
+import clsx from 'clsx'
 
-const Header: FC = () => {
+interface IHeader {
+	classChangeMenu: string
+	isTrue: boolean
+	setTrue: (state: boolean) => void
+}
+
+const Header: FC<IHeader> = ({ isTrue, setTrue, classChangeMenu }) => {
 	const { t, i18n } = useTranslation()
 	const [view, setView] = useState(false)
-	const [isTrue, setTrue] = useState(true)
 
 	const changeLanguage = (lng: string): void => {
 		i18n.changeLanguage(lng)
 		setView(!view)
 	}
 
-	const classChangeMenu = clsx('menu', { active: !isTrue })
 	const classChangeList = clsx(`${s.header__nav_list}`, { active: !isTrue })
+
 	return (
 		<>
-			<header className='header'>
+			<header className='header' onClick={(e)=> e.stopPropagation()}>
 				<div className={s.container}>
 					<nav id='nav__mq' className={s.header__nav}>
 						<ul className={classChangeList}>

@@ -20,7 +20,7 @@ const About: FC = () => {
 								<img className={s.my__picture} src={myPicture} alt='#' />
 								<div className={s.about__socials}>
 									<a href='https://github.com/Arthur1590' target='_blank'>
-										<img src={github} alt='github' />
+										<img property='true' src={github} alt='github' />
 									</a>
 									<a href='https://t.me/yep_its_me_01' target='_blank'>
 										<img src={telegram} alt='telegram' />

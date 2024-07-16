@@ -44,7 +44,7 @@ const RepoList: FC = () => {
 								>
 									{repo.name}
 								</button>
-							))}
+							))}					
 					</div>
 					{currentRepo && (
 						<div className={s.tabs__current}>

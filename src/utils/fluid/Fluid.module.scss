@@ -42,7 +42,7 @@
 			h1 {
 				font-weight: 600;
 				font-size: clamp(1rem, 10vw, 15rem);
-				color: #fd853a;
+				color: var(--colorDarkMode);
 			}
 
 			h4 {

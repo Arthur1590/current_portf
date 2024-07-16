@@ -1,0 +1,42 @@
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  display: inline-block;
+  text-align: left;
+  top: 5px;
+
+  &-checkbox {
+    display: none;
+  }
+
+  &-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #dddddd;
+    border-radius: 20px;
+    margin: 0;
+  }
+
+  &-button {
+    display: block;
+    width: 22px;
+    margin: 3px;
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 25px;
+    border: 2px solid #dddddd;
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+
+  &-checkbox:checked + .toggle-switch-label {
+    background: #3a91fc;
+  }
+
+  &-checkbox:checked + .toggle-switch-label .toggle-switch-button {
+    right: 0;
+  }
+}

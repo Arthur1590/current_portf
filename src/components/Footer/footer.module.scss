@@ -3,7 +3,7 @@
 .footer {
 	width: fit-content;
 	min-height: 5rem;
-	background: #fd853a21;
+	background: #3a91fc15;
 	border: 1px solid var(--footerBorder);
 	backdrop-filter: blur(3.5px);
 	margin: 8rem auto 0;
@@ -11,7 +11,7 @@
 	border-top-right-radius: 1.4rem;
 	display: flex;
 	align-self: flex-end;
-	box-shadow: 10px 75rem 100rem 70rem#fd853a7a;
+	box-shadow: 10px 75rem 100rem 70rem var(--colorFooterDarkMode);
 
 	& .wrapper {
 		display: flex;

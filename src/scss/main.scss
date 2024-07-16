@@ -17,7 +17,6 @@ html {
 	pointer-events: none;
 	cursor: pointer;
 }
-
 .App {
 	display: flex;
 	flex-direction: column;
@@ -25,33 +24,25 @@ html {
 	padding: 0;
 	margin: 0;
 }
-
-
-
 .main {
 	flex-grow: 1;
 }
-
 ::-webkit-scrollbar {
 	width: 12px;
 	height: 12px;
 	display: none;
 }
-
 ::-webkit-scrollbar-track {
 	background: none;
 	border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb {
-	background: #fd853a;
+	background: #3a91fc;
 	border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
 	background: #d6d6d6;
 }
-
 body {
 	background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3C/g%3E%3C/svg%3E");
 	background-color: var(--bgDarkMode);
@@ -62,30 +53,25 @@ body {
 	font-family: 'FiraCode';
 	font-weight: 400;
 }
-
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	color: #000000;
 }
-
 ::before,
 ::after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-
 ul {
 	list-style: none;
 }
-
 a {
 	text-decoration: none;
 	color: #fff;
 }
-
 button,
 input,
 textarea {
@@ -96,29 +82,31 @@ textarea {
 input[type='text'] {
 	border-bottom: 1px solid #fff;
 }
-
 body.Light {
-	--bgDarkMode: #ffffff;
+	--bgDarkMode: #c3f4f64b;
 	--colorFooterDarkMode: #fd853a;
 	--footerBorder: #000;
 	--colorDarkMode: #fd853a;
 	--BorderWhiteMode: 1px solid #000000;
-	--BorderNav: 1px solid #000000;
+	--BorderNav: 0 0 3px #010101;
 	--colorHeaderWhiteDarkMode: #000;
 	--colorNav: #fd853a;
 	--colorProjects: #2b2b2b;
 	--colorProjectsActive: #2b2b2b;
+	--colorActiveNavLink: #3a91fc;
+	--bgActivenavLink: #53535365;
 }
-
 body.Dark {
+	--bgActivenavLink: #ffffff65;
+	--colorActiveNavLink: #fd853a;
 	--bgDarkMode: #1f1d1d;
-	--colorFooterDarkMode: #fd853a;
+	--colorFooterDarkMode: #3a91fc;
 	--footerBorder: none;
-	--colorDarkMode: #fd853a;
-	--BorderWhiteMode: 1px solid #fd853a;
+	--colorDarkMode: #3a91fc;
+	--BorderWhiteMode: 1px solid #3a91fc;
 	--BorderNav: none;
 	--colorHeaderWhiteDarkMode: #fff;
-	--colorNav: #fd853a;
-	--colorProjects: #fd853a;
+	--colorNav: #3a91fc;
+	--colorProjects: #3a91fc;
 	--colorProjectsActive: #fff;
 }

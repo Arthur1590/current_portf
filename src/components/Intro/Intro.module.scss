@@ -34,7 +34,7 @@
 			font-size: clamp(1rem, 1.5vw, 1.5rem);
 
 			span {
-				color: #fd853a;
+				color: var(--colorDarkMode);
 				letter-spacing: 0.01rem;
 				font-size: clamp(1rem, 2vw, 1.9rem);
 			}
@@ -47,14 +47,14 @@
 		}
 
 		button {
-			color: #fd853a;
+			color: var(--colorDarkMode);
 			font-size: clamp(1rem, 2vw, 1.8rem);
-			border: 1px solid #fd853a;
+			border: 1px solid var(--colorDarkMode);
 			display: block;
 			padding: 1rem 1.2rem;
 			transition: 0.3s all ease-in-out;
 			&:hover {
-				background: #fd853a;
+				background: #3a91fc;
 				color: #f8eddf;
 			}
 		}
